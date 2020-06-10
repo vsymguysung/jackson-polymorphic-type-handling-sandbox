@@ -6,6 +6,10 @@ import java.util.Objects;
 public class Sedan1 extends Car1 {
     private Integer maxSpeed;
 
+    public Sedan1() {
+        super("sedan");
+    }
+
     public Integer getMaxSpeed() {
         return maxSpeed;
     }

@@ -7,6 +7,10 @@ public class SUV1 extends Car1 {
     private String engineType;
     private Integer zeroToSixtySecond;
 
+    public SUV1() {
+        super("@suv");
+    }
+
     public String getEngineType() {
         return engineType;
     }

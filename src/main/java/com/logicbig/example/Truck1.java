@@ -7,6 +7,10 @@ public class Truck1 extends Car1 {
     private Integer howManyWheels;
     private String maker;
 
+    public Truck1() {
+        super("truck");
+    }
+
     public Integer getHowManyWheels() {
         return howManyWheels;
     }
