@@ -15,6 +15,12 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 // so if setType() setter is defined, the type identifier will be set via that setter.
 // If setType is not defined, the type identifier will have no effect and it will be ignored.
 //
+// Property that defines whether type identifier value will be passed as part of JSON stream to deserializer (true),
+// or handled and removed by TypeDeserializer (false). Property has no effect on serialization.
+//
+// Default value is false, meaning that Jackson handles and removes the type identifier from JSON content
+// that is passed to JsonDeserializer.
+//
 @JsonTypeInfo(
         use = JsonTypeInfo.Id.NAME,
         include = JsonTypeInfo.As.PROPERTY,
