@@ -1,13 +1,14 @@
 package com.logicbig.example;
 
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.annotation.*;
 
 //
-// "visible = false", both serialization/deserialization work.
+// When set visible true, the visible property that defines whether type identifier value will be passed
+// as part of JSON stream to deserializer (true), or handled and removed by TypeDeserializer (false).
+// the visible property has no effect on serialization.
 //
-// "visible = true", only serialization works and deserialization fails but
-//  creating the getter for the type property will resolve the issue.
+// Default value is false, meaning that Jackson handles and removes the type identifier from JSON content
+// that is passed to JsonDeserializer.
 //
 @JsonTypeInfo(
         use = JsonTypeInfo.Id.NAME,
@@ -23,5 +24,9 @@ public abstract class Car {
 
     public String getType() {
         return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

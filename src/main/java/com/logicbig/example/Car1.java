@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonTypeId;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 //
-// The "property" attribute will define the property name for the type identifiers.
+// The "property" property will define the property name for the type identifiers.
 //  So, "type" property will be used to keep type identifiers in the serialized JSON string.
 //
 // Type Identifier visibility.
@@ -15,8 +15,9 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 // so if setType() setter is defined, the type identifier will be set via that setter.
 // If setType is not defined, the type identifier will have no effect and it will be ignored.
 //
-// Property that defines whether type identifier value will be passed as part of JSON stream to deserializer (true),
-// or handled and removed by TypeDeserializer (false). Property has no effect on serialization.
+// When set visible true, the visible property that defines whether type identifier value will be passed
+// as part of JSON stream to deserializer (true), or handled and removed by TypeDeserializer (false).
+// the visible property has no effect on serialization.
 //
 // Default value is false, meaning that Jackson handles and removes the type identifier from JSON content
 // that is passed to JsonDeserializer.
